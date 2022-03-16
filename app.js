@@ -5,7 +5,7 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "output");
+const OUTPUT_DIR = path.resolve(__dirname, "Team Page");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
@@ -147,7 +147,7 @@ function start(){
             fs.mkdirSync(OUTPUT_DIR);
           }
 
-          fs.writeFile(outputPath, render(team), err =>{
+          fs.writeFileSync(outputPath, render(team), err =>{
             if (err){
               console.log(err)
               return
