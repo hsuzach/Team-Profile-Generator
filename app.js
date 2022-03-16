@@ -18,7 +18,6 @@ const { resolvePtr } = require("dns");
 let team = [];
 
 
-
 function start(){
   function setManager(){
     inquirer.prompt([
@@ -142,7 +141,20 @@ function start(){
       if (data.role === 'I am finished adding members'){
 
         console.log(team);
-        // renderTeam();
+
+        function renderTeam(){
+          if (!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR);
+          }
+
+          fs.writeFile(outputPath, render(team), err =>{
+            if (err){
+              console.log(err)
+              return
+            }
+          })
+        }
+        renderTeam();
       }
       
     })
