@@ -4,7 +4,7 @@ This Node-based application generates a project's team page from command line in
 <br>
 The application also uses Jest to test the class criteria. 
 
-
+This sample can be viewed here at https://hsuzach.github.io/Team-Profile-Generator/.
 ![image](https://user-images.githubusercontent.com/30445082/158532196-0a9652fb-79bc-4134-b6d5-aa9fcbe214ff.png)
 
 
